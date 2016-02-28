@@ -1,0 +1,649 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3 Starter Kit</title>
+
+    <!-- Disable tap highlight on IE -->
+    <meta name="msapplication-tap-highlight" content="no">
+
+    <!-- Web Application Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="D3 Starter Kit">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Web Starter Kit">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#2F3BA2">
+
+    <!-- Color the status bar on mobile devices -->
+    <meta name="theme-color" content="#2F3BA2">
+    
+    <!-- Prism -->
+    <link href="styles/prism.css" rel="stylesheet">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <!-- Material Design Lite page styles:
+    You can choose other color schemes from the CDN, more info here http://www.getmdl.io/customize/index.html
+    Format: material.color1-color2.min.css, some examples:
+    material.red-teal.min.css
+    material.blue-orange.min.css
+    material.purple-indigo.min.css
+    -->
+    <!-- <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.indigo-pink.min.css">-->
+
+    <!-- Material Design icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Your styles -->
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+        <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+                <h3>D3 Starter Kit</h3>
+            </div>
+            <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+            </div>
+            <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+                <a href="#concepts" class="mdl-layout__tab is-active">Concepts</a>
+                <a href="#demos" class="mdl-layout__tab">Demos</a>
+                <a href="#tributaries" class="mdl-layout__tab">Tributaries</a>
+                <a href="#about" class="mdl-layout__tab">About</a>
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+                    <i class="material-icons" role="presentation">whatshot</i>
+                    <span class="visuallyhidden">Hot</span>
+                </button>
+                <div class="header__fab-menu">
+                        <ul>
+                            <li id="fab-close">
+                                <i class="material-icons mdl-36" role="presentation">clear</i>
+                                <a href="#">Close</a>
+                            </li>
+                            <li id="fab-group-work">
+                                <i class="material-icons mdl-36" role="presentation">group_work</i>
+                                <a href="https://github.com/dkemper01" target="_blank">GitHub Repo</a>
+                            </li>
+                            <li id="fab-group-work">
+                                <i class="material-icons mdl-36" role="presentation">code</i>
+                                <a href="http://tributary.io" target="_blank">Tributary</a>
+                            </li>
+                        </ul>
+                    </div>
+            </div>
+        </header>
+        <main class="mdl-layout__content">
+            <div class="mdl-layout__tab-panel is-active" id="concepts">
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--light-green-400 mdl-color-text--white">
+                        <object data="images/noun-graph-bar-set.svg" type="image/svg+xml" id="noun-set"></object>
+                    </header>
+                    <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+                        <div class="mdl-card__supporting-text">
+                            <h4>Featured Example</h4> <h6>Triangulation of Random Points.</h6>Featured examples are simple but effective learning tools. Never too much JS, HTML, or CSS. Perfect for those learning D3.
+                        </div>
+                    </div>
+                    <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
+                        <i class="material-icons">more_vert</i>
+                    </button>
+                    <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
+                        <li class="mdl-menu__item"><a class="featured-example--open-here" data-target-state="closed">Open Pen Here</a></li>
+                        <li class="mdl-menu__item"><a href="http://codepen.io/adamesque/pen/qHJsf" target="_blank">Open Pen in New Tab</a></li>
+                        <li class="mdl-menu__item"><a href="http://codepen.io/adamesque/pen/qHJsf">Go to Codepen Demo</a></li>
+                    </ul>
+                </section>
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div id="pen-qHJsf" class="cpn-embedded">
+                        <p data-height="268" data-width="100%" data-theme-id="0" data-slug-hash="qHJsf" data-default-tab="result" data-user="adamesque" class='codepen'>See the Pen <a href='http://codepen.io/adamesque/pen/qHJsf/'>Delaunay Triangulation of Random Points</a> by Adam Luikart (<a href='http://codepen.io/adamesque'>@adamesque</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
+                        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                </section>
+                <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+                    <div class="mdl-card mdl-cell mdl-cell--12-col">
+                        <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+                            <h4 class="mdl-cell mdl-cell--12-col">Essentials</h4>
+                            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                <div class="section__circle-container__circle mdl-color--primary"></div>
+                            </div>
+                            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                <h5>Thinking with Joins</h5>
+                                <figure>
+                                    <blockquote cite="http://bost.ocks.org/mike/join/">You want one circle per datum. Instead of instructing D3 to create circles, then, tell D3 that the selection "circle" should correspond to data. This concept is called the data join ...</blockquote>
+                                    <figcaption>Mike Bostock in <cite>Thinking with Joins (https://bost.ocks.org/mike/join/)</cite>
+                                    </figcaption>
+                                </figure>
+                                <p><a href="http://bost.ocks.org/mike/join/">Read it bost.ocks.org</a>.</p>
+                            </div>
+                            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                <div class="section__circle-container__circle mdl-color--primary"></div>
+                            </div>
+                            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                <h5>Selections</h5>
+                                <figure>
+                                <blockquote cite="https://github.com/mbostock/d3/wiki/Selections#append">A <b>selection</b> is an array of elements pulled from the current document. D3 uses CSS3 to select elements. For example, you can select by tag ("div"), class (".awesome"), unique identifier ("#foo"), attribute ("[color=red]"), or containment ("parent child").</blockquote>
+                                    <figcaption>Mike Bostock in <cite>Selections (https://github.com/mbostock/d3/wiki/Selections)</cite>
+                                    </figcaption>
+                                </figure>
+                                <p><a href="https://github.com/mbostock/d3/wiki/Selections#append">Read it on GitHub</a>.</p>
+                            </div>
+                            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                <div class="section__circle-container__circle mdl-color--primary"></div>
+                            </div>
+                            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                <h5>Scales in D3</h5>
+                                <figure>
+                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch07.html#_domains_and_ranges">One more thing: to prevent your brain from mixing up the input domain and output range terminology, I’d like to propose a little exercise. When I say “input,” you say “domain.” Then I say “output,” and you say “range.” Ready? </blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization (http://chimera.labs.oreilly.com/books/1230000000345/ch07.html)</cite>
+                                    </figcaption>
+                                </figure>
+                                <p><a href="http://chimera.labs.oreilly.com/books/1230000000345/ch07.html">Interactive Data Visualization for the Web, Chapter 7</a>.</p>
+                            </div>
+                            <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                                <div class="section__circle-container__circle mdl-color--primary"></div>
+                            </div>
+                            <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                                <h5>Drawing in SVG</h5>
+                                <figure>
+                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_the_svg_element">There are a number of visual elements that you can include between those svg tags, including rect, circle, ellipse, line, text, and path. (Sorry, zebras is not valid in this context.)</blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization (http://chimera.labs.oreilly.com/books/1230000000345/ch03.html)</cite>
+                                    </figcaption>
+                                </figure>
+                                <p><a href="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_the_svg_element">Interactive Data Visualization for the Web, Chapter 3</a>.</p>
+                            </div>
+                        </div>
+                        <div class="mdl-card__actions">
+                            <a href="http://www.oreilly.com/pub/au/5355" class="mdl-button">Scott Murray</a><a href="https://en.wikipedia.org/wiki/Mike_Bostock" class="mdl-button">Mike Bostock</a>
+                        </div>
+                    </div> 
+                </section>
+                <section class="section--footer mdl-color--white mdl-grid">
+                    <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                        <div class="section__circle-container__circle mdl-color--accent section__circle--big">
+                            <img src="images/mike-bostock.jpeg" class="section__circle-container__circle__image"/>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>Mike Bostock</h5>Creator of D3 and former Graphics Editor for <em>The New York Times</em>.
+                    </div>
+                    <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                        <div class="section__circle-container__circle mdl-color--accent section__circle--big">
+                            <img src="images/scott-murray1.jpg" class="section__circle-container__circle__image-scott"/>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                        <h5>Scott Murray</h5>In Learning Group at O'Reilly Media and former Assistant Professor of Design at USF.
+                    </div>
+                </section>
+            </div>
+            <div class="mdl-layout__tab-panel" id="demos">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Force Directed Graph</h4>
+                        <p>
+                            An interactive graph with forces like "gravity", "charge", and "friction". It could be cyclic, or acyclic, directional or non-directional, connected, or disconnected. It usually all depends on the data!  If a node is connected to another via one or more edges, a relationship exists among these data. 
+                        </p>
+                        <p>
+                            Here, we have the social media usage of fifteen departments, initiatives, and other governmental organizations of New York City. The relationship that connects one or more of them is the fact that they share a use of one or more of the same social media service.
+                        </p>
+                        <div class="force-ex-1-legend"></div>
+                        <div class="force-ex-1-chips-legend"></div>
+                        <div class="force-ex-1"></div>
+                    </div>
+                </section>
+                <section class="section--center mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Definitions</h4>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Force Layout</h5>
+                                <figure>
+                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout">
+                                    Force-directed layouts are so-called because they use simulations of physical forces to arrange elements on the screen.  The elements are nodes and edges; SVG shapes and lines, respectively.</blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 11</cite></figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#force">d3.layout.force()</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">An Ordinal Scale: Categorical Colors</h5>
+                                <figure>
+                                <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#_ordinal">
+                                    Ordinal scales have a discrete domain, such as a set of names or categories. There are also quantitative scales, which have a continuous domain, such as the set of real numbers. Scales are an optional feature in D3; you don't have to use them, if you prefer to do the math yourself. However, using scales can greatly simplify the code needed to map a dimension of data to a visual representation.</blockquote>
+                                    <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Ordinal-Scales)</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category10">d3.scale.category10()</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Nodes</h5>
+                                <figure>
+                                <blockquote cite="https://github.com/mbostock/d3/wiki/Force-Layout#nodes">
+                                    Each node has the following attributes:
+                                    <ul>
+                                        <li>index - the zero-based index of the node within the <em>nodes</em> array.</li>
+                                        <li>x - the <em>x</em>-coordinate of the current node position.</li>
+                                        <li>y - the <em>y</em>-coordinate of the current node position.</li>
+                                        <li>px - the <em>x</em>-coordinate of the previous node position.</li>
+                                        <li>py - the <em>y</em>-coordinate of the previous node position.</li>
+                                        <li>fixed - a boolean indicating whether node position is locked.</li>
+                                        <li>weight - the node weight; the number of associated links.</li>
+                                    </ul>
+                                </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Force-Layout#nodes</cite></figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#nodes">force.nodes([nodes])</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Links</h5>
+                                <figure>
+                                <blockquote cite="https://github.com/mbostock/d3/wiki/Force-Layout#links">
+                                    Each link has the following attributes:
+                                    <ul>
+                                        <li>source - the source node (an element in <em>nodes</em>).</li>
+                                        <li>target - the target node (an element in <em>nodes</em>).</li>
+                                    </ul>
+                                </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Force-Layout#links</cite></figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#links">force.links([links])</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Range Bands</h5>
+                                <figure>
+                                <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands">
+                                    Sets the output range from the specified continuous interval. The array interval contains two elements representing the minimum and maximum numeric value. This interval is subdivided into n evenly-spaced bands, where n is the number of (unique) values in the input domain. </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands</cite></figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands">ordinal.rangeBands(interval[, padding[, outerPadding]])</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Tick</h5>
+                                <figure>
+                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout">
+                                    The "tick" events are dispatched for each tick of the simulation. Listen to tick events to update the displayed positions of nodes and links. For example ...</blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 11</cite></figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#tick">force.tick()</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                                    
+	   <section class="section--center mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <p>
+                            <pre class="language-js">
+                                <code>
+        // Data, width and height
+        //
+        var dataset = null;
+        var w = $('.force-ex-1').innerWidth();
+        var h = 600;
+        
+        if ((w > 0) && (!force)) {
+            
+            d3.json("data/nyc-sm-usage-relationships.json", visualizeGraphData);  
+        }
+        
+        function visualizeGraphData(error, json) {
+            
+            if (error) {
+                return console.warn(error);
+            }
+
+            // Set our data var.
+            //
+            dataset = json;
+
+            // Initialize a default force layout, using the nodes and edges in dataset.
+            //
+            force = d3.layout.force()
+                .nodes(dataset.nodes)
+                .links(dataset.edges)
+                .size([w, h])
+                .gravity(0.050)
+                .linkDistance([200])
+                .linkStrength([0.25])
+                .charge([-300])
+                .start();
+
+            var colors = d3.scale.category20();
+
+            // Create SVG element
+            //
+            var svg = d3.select('.force-ex-1')
+                .append('svg')
+                .attr('width', w)
+                .attr('height', h);
+
+            var g = svg.append('g');
+
+            // Create edges as lines
+            //
+            var edges = g.selectAll('line')
+                .data(dataset.edges)
+                .enter()
+                .append('line')
+                .style('stroke', '#ccc')
+                .style('stroke-width', '1.0');
+
+            var nodes = g.selectAll('.node')
+                .data(dataset.nodes)
+                .enter().append('g')
+                .attr('class', 'node')
+                .call(force.drag);
+
+            // Create nodes as circles
+            //
+            nodes.append('path')
+                .attr('d', d3.svg.symbol()
+                    .type(function (d) {
+                        if (d.name == 'DOT') {
+                            return 'triangle-up';
+                        } else {
+                            return 'circle';
+                        }
+                    })
+                    .size(512))
+                .style('fill', function (d, i) {
+                    if (d.name == 'DOT') {
+                        return colors(i);
+                    } else {
+                        return 'white';
+                    }
+                })
+                .style('stroke', function (d, i) {
+                    return colors(i);
+                })
+                .style('stroke-width', '2.0');
+
+            // Define the legend as a set of material chips.
+            //
+            var chipsLegend = d3.select('.force-ex-1-chips-legend');
+            var chips = chipsLegend.selectAll('div')
+                        .data(dataset.nodes)
+                        .enter()
+                        .append('div')
+                        .attr('class', 'mdl-chip')
+
+
+            chips.append('div')
+                        .attr('class', 'mdl-chip-img')
+                        .style('background-color', function(d, i) { return colors(i); });
+            chips.append('span')
+                        .attr('class', 'mdl-chip-text')
+                        .text(function(d) { return d.legendName; });
+
+
+            // Every time the simulation "ticks", this will be called.
+            //
+            force.on('tick', function () {
+
+                edges.attr("x1", function(d) { return d.source.x; })
+                  .attr("y1", function(d) { return d.source.y; })
+                  .attr("x2", function(d) { return d.target.x; })
+                  .attr("y2", function(d) { return d.target.y; });
+
+                nodes.attr("transform", function (d) {
+                    return "translate(" + d.x + "," + d.y + ")";
+                });
+
+            });
+
+        }                                </code>
+                            </pre>
+                        </p>
+                    </div>
+                </section>
+       <section class="section--center mdl-grid mdl-grid--no-spacing">
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4>Categorical Color Fun</h4>
+                <p>
+                    So little the code, so colorful the result! First, read <em><a href="http://bost.ocks.org/mike/join/">Thinking with Joins</a></em> to understand the select().data().enter().append() method chain.  It is a quick and insightful read.  You may also want to check out <em>ordinal scales</em> that produce a range of <em><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c">categorical colors</a>.</em>
+                </p>
+                <p>By knowing only a little about SVG, you can read the code below and understand exactly how the colored circles are being produced.  That's it!  This little bit of code is all that is needed.
+                </p>                    
+                <div class="color-c-chips-legend"></div>
+                <div class="color-c-ex1"></div>
+            </div>
+        </section>
+        <section class="section--center mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <h4>Definitions</h4>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                <div class="mdl-card definition-card">
+                    <div>
+                        <h5 class="mdl-layout__header-row">SVG: Drawing Circles</h5>
+                        <figure>
+                        <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_simple_shapes">
+                            The circle element draws a circle. Use cx and cy to specify the coordinates of the center, and r to specify the radius</blockquote>
+                            <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 3</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mdl-card__actions"><a href="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_simple_shapes">SVG - Simple Shapes</a>
+                    </div>
+                </div>
+            </div>
+            <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                <div class="mdl-card definition-card">
+                    <div>
+                        <h5 class="mdl-layout__header-row">An Ordinal Scale: Categorical Colors</h5>
+                        <figure>
+                        <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#_ordinal">
+                            Ordinal scales have a discrete domain, such as a set of names or categories. There are also quantitative scales, which have a continuous domain, such as the set of real numbers. Scales are an optional feature in D3; you don't have to use them, if you prefer to do the math yourself. However, using scales can greatly simplify the code needed to map a dimension of data to a visual representation.</blockquote>
+                            <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Ordinal-Scales)</cite>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category10">d3.scale.category10()</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section--center mdl-grid">
+            <div class="mdl-cell mdl-cell--12-col">
+                <p>
+                    <pre class="language-js">
+                        <code>
+    // Width and height of containing element 
+    //
+    var w = $('.color-c-ex1').innerWidth();
+    var h = Math.min(400, w);
+
+    if ((w > 0) && (!circles)) {
+
+        var svg = d3.select('.color-c-ex1')
+            .append('svg')
+            .attr('width', w)
+            .attr('height', h);
+        var n = 35;
+        var m = 30;
+        var data = []
+
+        for(var i = 40; i > 0; i--){
+         data.push(i); 
+        }
+
+        var c20c = d3.scale.category20c();
+        var g = svg.append("g")
+        .attr("transform", "translate(5,10)");
+
+        circles = g.selectAll("circle")
+        .data(data);
+
+        circles.enter()
+        .append("circle")
+        .attr({
+          cx: (w/2),
+          cy: 205,
+          r: function(d,i) {return Math.random()*d*5},
+          fill: c20c
+        });
+    }  
+                        </code>
+                    </pre>
+                </p>
+            </div>
+        </section>
+            </div>
+            <div class="mdl-layout__tab-panel" id="tributaries">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Learning with Tributaries and Inlets</h4>
+                        <p>
+                            Tributary <a href="http://tributary.io">tributary.io</a> is a rapid prototyping and overall interactive learning tool.  In addition to providing a REPL for JavaScript, one of the single greatest features of Tributary is the slider.  That is; find a method parameter, an array of values, or a number that is a factor in a calculation, then click.  You will notice a slider control pop up.  Use it to adjust the parameter, number, or array value of your choice and see the result in real-time. 
+                        </p>
+                    </div>
+                </section>
+                <section class="section--center mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Selected Tributaries</h4>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">#401 Inside the nautilus</h5>
+                                <figure>
+                                    <img class="section__tributaries-img" src="images/nautilus.png" alt="nautilus"/>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="http://tributary.io/inlet/5743595">nautilus inlet</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">droplet</h5>
+                                <figure>
+                                    <img class="section__tributaries-img" src="images/droplet.png" alt="droplet"/>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="http://tributary.io/inlet/a7dab6ef7b2ad9025344">droplet inlet</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>   
+            <div class="mdl-layout__tab-panel" id="about">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>About</h4>
+                        <p>
+                            By <a href="http://dankemper.net/t3">me</a> for you! 
+                        </p>
+                        <p class="para--pull-down"></p>
+                  </div>
+                </section>
+            </div>
+            <footer class="mdl-mega-footer">
+                <div class="mdl-mega-footer--middle-section">
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading footer__mdl-link" data-tab-link="#concepts">Concepts</h1>
+                    </div>
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading footer__mdl-link" data-tab-link="#demos">Demos</h1>
+                    </div>
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading footer__mdl-link" data-tab-link="#tributaries">Tributaries</h1>
+                    </div>
+                    <div class="mdl-mega-footer--drop-down-section">
+                        <h1 class="mdl-mega-footer--heading footer__mdl-link" data-tab-link="#about">About</h1>
+                    </div>
+                </div>
+                <div class="mdl-mega-footer--bottom-section">
+                    <div class="mdl-logo">
+                        D3 Starter Kit
+                    </div>
+                    <ul class="mdl-mega-footer--link-list">
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Privacy and Terms</a></li>
+                    </ul>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!--    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>-->
+
+    <!-- build:js(app/) ../../scripts/main.min.js -->
+    <!-- <script src="scripts/main.js"></script> -->
+    <script src="./styles/src/mdlComponentHandler.js"></script>
+    <script src="./styles/src/button/button.js"></script>
+    <script src="./styles/src/checkbox/checkbox.js"></script>
+    <script src="./styles/src/icon-toggle/icon-toggle.js"></script>
+    <script src="./styles/src/menu/menu.js"></script>
+    <script src="./styles/src/progress/progress.js"></script>
+    <script src="./styles/src/radio/radio.js"></script>
+    <script src="./styles/src/slider/slider.js"></script>
+    <script src="./styles/src/spinner/spinner.js"></script>
+    <script src="./styles/src/switch/switch.js"></script>
+    <script src="./styles/src/tabs/tabs.js"></script>
+    <script src="./styles/src/textfield/textfield.js"></script>
+    <script src="./styles/src/tooltip/tooltip.js"></script>
+    <script src="./styles/src/layout/layout.js"></script>
+    <script src="./styles/src/data-table/data-table.js"></script>
+    <script src="./styles/src/ripple/ripple.js"></script>
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js"></script>
+    <script src="scripts/prism.js"></script>
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+
+    <!-- Built with love using Web Starter Kit -->
+</body>
+
+</html>

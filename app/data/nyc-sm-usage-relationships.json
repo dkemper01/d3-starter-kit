@@ -1,0 +1,361 @@
+{
+    "nodes": [
+        {
+            "name": "Child Services",
+            "services": ["YouTube"],
+            "legendName": "ChSv"
+        },
+        {
+            "name": "Commission on Human Rights",
+            "services": ["Facebook"],
+            "legendName": "CoHR"
+        },
+        {
+            "name": "Dept of Consumer Affairs",
+            "services": ["Linked-In"],
+            "legendName": "DCA"
+        },
+        {
+            "name": "Young Mens Initiative",
+            "services": ["Tumblr"],
+            "legendName": "YMI"
+        },
+        {
+            "name": "NYCSevereWeather",
+            "services": ["WordPress"],
+            "legendName": "NSW"
+        },
+        {
+            "name": "ACS",
+            "services": ["Facebook", "Linked-In"],
+            "legendName": "ACS"
+        },
+        {
+            "name": "NYPD",
+            "services": ["Facebook", "Twitter", "YouTube"],
+            "legendName": "NYPD"
+        },
+        {
+            "name": "DRIS",
+            "services": ["Facebook", "Twitter", "Pinterest", "YouTube"],
+            "legendName": "DRIS"
+        },
+        {
+            "name": "GreeNYC",
+            "services": ["Facebook", "Foursquare", "Twitter", "YouTube"],
+            "legendName": "GNYC"
+        },
+        {
+            "name": "DOB",
+            "services": ["Facebook", "Flickr", "Tumblr", "Twitter", "YouTube"],
+            "legendName": "DOB"
+        },
+        {
+            "name": "Mayor's Office",
+            "services": ["Flickr", "Instagram", "iPhone App", "Twitter", "YouTube"],
+            "legendName": "MaOf"
+        },
+        {
+            "name": "DOITT",
+            "services": ["Facebook", "Flickr", "Tumblr", "Twitter", "Wordpress", "YouTube"],
+            "legendName": "DOITT"
+        },
+        {
+            "name": "FDNY",
+            "services": ["Facebook", "Flickr", "Foursquare", "Pinterest", "Tumblr", "Twitter", "YouTube"],
+            "legendName": "FDNY"
+        },
+        {
+            "name": "DOE",
+            "services": ["Facebook", "Flickr", "Linked-In", "Newsletter", "SMS", "Twitter", "Vimeo", "YouTube"],
+            "legendName": "DOE"
+        },
+        {
+            "name": "DOT",
+            "services": ["Android", "Broadcastr", "Facebook", "Flickr", "Foursquare", "Instagram", "iPhone App", "Newsletter", "Tumblr", "Twitter", "YouTube"],
+            "legendName": "DOT"
+        }
+    ],
+    "edges": [
+        {
+            "source": 0,
+            "target": 6
+        },
+        {
+            "source": 0,
+            "target": 7
+        },
+        {
+            "source": 0,
+            "target": 8
+        },
+        {
+            "source": 0,
+            "target": 9
+        },
+        {
+            "source": 0,
+            "target": 10
+        },
+        {
+            "source": 0,
+            "target": 11
+        },
+        {
+            "source": 0,
+            "target": 12
+        },
+        {
+            "source": 0,
+            "target": 13
+        },
+        {
+            "source": 0,
+            "target": 14
+        },
+        {
+            "source": 1,
+            "target": 5
+        },
+        {
+            "source": 1,
+            "target": 6
+        },
+        {
+            "source": 1,
+            "target": 7
+        },
+        {
+            "source": 1,
+            "target": 8
+        },
+        {
+            "source": 1,
+            "target": 9
+        },
+        {
+            "source": 1,
+            "target": 11
+        },
+        {
+            "source": 1,
+            "target": 12
+        },
+        {
+            "source": 1,
+            "target": 13
+        },
+        {
+            "source": 1,
+            "target": 14
+        },
+        {
+            "source": 2,
+            "target": 5
+        },
+        {
+            "source": 2,
+            "target": 13
+        },
+        {
+            "source": 3,
+            "target": 9
+        },
+        {
+            "source": 3,
+            "target": 11
+        },
+        {
+            "source": 3,
+            "target": 12
+        },
+        {
+            "source": 3,
+            "target": 14
+        },
+        {
+            "source": 4,
+            "target": 11
+        },
+        {
+            "source": 5,
+            "target": 6
+        },
+        {
+            "source": 5,
+            "target": 7
+        },
+        {
+            "source": 5,
+            "target": 8
+        },
+        {
+            "source": 5,
+            "target": 9
+        },
+        {
+            "source": 5,
+            "target": 11
+        },
+        {
+            "source": 5,
+            "target": 12
+        },
+        {
+            "source": 5,
+            "target": 13
+        },
+        {
+            "source": 5,
+            "target": 14
+        },
+        {
+            "source": 6,
+            "target": 7
+        },
+        {
+            "source": 6,
+            "target": 8
+        },
+        {
+            "source": 6,
+            "target": 9
+        },
+        {
+            "source": 6,
+            "target": 10
+        },
+        {
+            "source": 6,
+            "target": 11
+        },
+        {
+            "source": 6,
+            "target": 12
+        },
+        {
+            "source": 6,
+            "target": 13
+        },
+        {
+            "source": 6,
+            "target": 14
+        },
+        {
+            "source": 7,
+            "target": 8
+        },
+        {
+            "source": 7,
+            "target": 9
+        },
+        {
+            "source": 7,
+            "target": 10
+        },
+        {
+            "source": 7,
+            "target": 11
+        },
+        {
+            "source": 7,
+            "target": 12
+        },
+        {
+            "source": 7,
+            "target": 13
+        },
+        {
+            "source": 7,
+            "target": 14
+        },
+        {
+            "source": 8,
+            "target": 9
+        },
+        {
+            "source": 8,
+            "target": 10
+        },
+        {
+            "source": 8,
+            "target": 11
+        },
+        {
+            "source": 8,
+            "target": 12
+        },
+        {
+            "source": 8,
+            "target": 13
+        },
+        {
+            "source": 8,
+            "target": 14
+        },
+        {
+            "source": 8,
+            "target": 14
+        },
+        {
+            "source": 9,
+            "target": 10
+        },
+        {
+            "source": 9,
+            "target": 11
+        },
+        {
+            "source": 9,
+            "target": 12
+        },
+        {
+            "source": 9,
+            "target": 13
+        },
+        {
+            "source": 9,
+            "target": 14
+        },
+        {
+            "source": 10,
+            "target": 11
+        },
+        {
+            "source": 10,
+            "target": 12
+        },
+        {
+            "source": 10,
+            "target": 13
+        },
+        {
+            "source": 10,
+            "target": 14
+        },
+        {
+            "source": 11,
+            "target": 12
+        },
+        {
+            "source": 11,
+            "target": 13
+        },
+        {
+            "source": 11,
+            "target": 14
+        },
+        {
+            "source": 12,
+            "target": 13
+        },
+        {
+            "source": 12,
+            "target": 14
+        },
+        {
+            "source": 13,
+            "target": 14
+        }
+    ]
+}
