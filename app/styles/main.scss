@@ -41,13 +41,24 @@ figure {
 .mdl-demo .mdl-layout__tab-bar-button {
   display: none;
 }
+/* 
+ * Choose to show the fab menu by removing this selector
+ *
 .mdl-demo .mdl-layout.is-small-screen .mdl-layout__tab-bar .mdl-button {
   display: none;
 }
+
 .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar,
 .mdl-demo .mdl-layout:not(.is-small-screen) .mdl-layout__tab-bar-container {
   overflow: visible;
 }
+*/
+
+.mdl-demo .mdl-layout .mdl-layout__tab-bar,
+.mdl-demo .mdl-layout .mdl-layout__tab-bar-container {
+  overflow: visible;
+}
+
 .mdl-demo .mdl-layout__tab-bar-container {
   height: 64px;
 }
@@ -316,6 +327,14 @@ figure {
             font-size: 36px;   
         }
     }
+}
+
+.mdl-demo .mdl-layout.is-small-screen .header__fab-menu {
+    margin-top: 5em;
+}
+
+.mdl-demo .mdl-layout:not(.is-small-screen) .header__fab-menu {
+    margin-top: -2.8em;
 }
 
 // End Fab Menu
