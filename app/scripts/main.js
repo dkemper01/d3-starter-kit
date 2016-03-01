@@ -265,7 +265,7 @@
 
         // Width and height
         var w = $('.color-c-ex1').innerWidth();
-        var h = Math.min(450, w);
+        var h = 450;
 
         if ((w > 0) && (!circles)) {
 
