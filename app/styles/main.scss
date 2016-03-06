@@ -41,6 +41,7 @@ figure {
 .mdl-demo .mdl-layout__tab-bar-button {
   display: none;
 }
+
 /* 
  * Choose to show the fab menu by removing this selector
  *
@@ -53,6 +54,10 @@ figure {
   overflow: visible;
 }
 */
+
+.mdl-demo .mdl-button > i.material-icons {
+    color: white;
+}
 
 .mdl-demo .mdl-layout .mdl-layout__tab-bar,
 .mdl-demo .mdl-layout .mdl-layout__tab-bar-container {
@@ -261,6 +266,22 @@ figure {
   padding: 7px 10px 6px 10px;
 }
 
+.mdl-demo .mdl-layout:not(.is-small-screen) .click-svg {
+  width: 500px;
+  border-radius: none !important;
+  height: 500px !important;
+  right: -150px !important;
+  top: -240px !important;
+}
+
+.mdl-demo .mdl-layout .click-svg {
+  width: 500px;
+  border-radius: none !important;
+  height: 500px !important;
+  right: -150px !important;
+  top: -220px !important;
+}
+
 // Begin Fab Menu 
 .click {
   -webkit-animation: activate 0.3s linear forwards;
@@ -330,11 +351,12 @@ figure {
 }
 
 .mdl-demo .mdl-layout.is-small-screen .header__fab-menu {
-    margin-top: 5em;
+    margin-top: 2.5em;
+    right: 6.0em;
 }
 
 .mdl-demo .mdl-layout:not(.is-small-screen) .header__fab-menu {
-    margin-top: -2.8em;
+    margin-top: -3.5em;
 }
 
 // End Fab Menu

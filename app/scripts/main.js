@@ -337,21 +337,20 @@
         var $sender = $(this);
 
         if ($sender.hasClass('back')) {
-            $(this).removeClass('back');
+            $(this).removeClass('back');       
         }
 
-        $(this).addClass('click');
-
-        setTimeout(function () {
-            $('.mdl-button--fab > *').hide();
-            $('.header__fab-menu').show();
-        }, 250)
+        $(this).addClass('click-svg');
+        $(this).find('circle').attr({"r": "250"});
+        $('.mdl-button--fab > *:not(svg)').hide();
+        $('.header__fab-menu').show();
     }
 
     function hideFabMenu() {
 
-        $('.mdl-button--fab').removeClass('click').addClass('back');
-        $('.mdl-button--fab > *').show();
+        $('.mdl-button--fab').removeClass('click-svg').addClass('back');
+        $('.mdl-button--fab').find('circle').attr({"r": "28"});
+        $('.mdl-button--fab > *:not(svg)').show();
         $('.header__fab-menu').hide();
     }
 
