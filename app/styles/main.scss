@@ -266,9 +266,13 @@ figure {
   padding: 7px 10px 6px 10px;
 }
 
+.mdl-demo .mdl-button--fab-clear {
+  background: none !important;
+  box-shadow: none !important;
+}
+
 .mdl-demo .mdl-layout:not(.is-small-screen) .click-svg {
   width: 500px;
-  border-radius: none !important;
   height: 500px !important;
   right: -150px !important;
   top: -240px !important;
@@ -276,7 +280,6 @@ figure {
 
 .mdl-demo .mdl-layout .click-svg {
   width: 500px;
-  border-radius: none !important;
   height: 500px !important;
   right: -150px !important;
   top: -220px !important;
@@ -326,9 +329,9 @@ figure {
 }
 
 .header__fab-menu {
-  display: none;
   position: absolute;
-  right: 5.0em;
+  right: -10.0em;
+  opacity: 0;
   z-index: 3000;
     
     li {
@@ -352,11 +355,10 @@ figure {
 
 .mdl-demo .mdl-layout.is-small-screen .header__fab-menu {
     margin-top: 2.5em;
-    right: 6.0em;
 }
 
 .mdl-demo .mdl-layout:not(.is-small-screen) .header__fab-menu {
-    margin-top: -3.5em;
+    top: -3.5em;
 }
 
 // End Fab Menu

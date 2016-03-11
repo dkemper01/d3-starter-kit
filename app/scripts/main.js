@@ -336,22 +336,26 @@
 
         var $sender = $(this);
 
+        console.log($sender);
+        
         if ($sender.hasClass('back')) {
-            $(this).removeClass('back');       
+            $sender.removeClass('back');       
         }
-
-        $(this).addClass('click-svg');
-        $(this).find('circle').attr({"r": "250"});
-        $('.mdl-button--fab > *:not(svg)').hide();
-        $('.header__fab-menu').show();
+        
+        $sender.addClass('click-svg');
+        TweenMax.to("circle", 0.5, { attr: {"r": 240, "fill": "rgb(85, 139, 47)"}, ease: Bounce.easeOut });
+        TweenMax.to(".header__fab-menu", 0.5, { right: "5.5em", opacity: "1.0", ease: Power2.easeOut });
+        $('.mdl-button--fab > *:not(svg)').hide(); 
+     
     }
 
     function hideFabMenu() {
 
         $('.mdl-button--fab').removeClass('click-svg').addClass('back');
-        $('.mdl-button--fab').find('circle').attr({"r": "28"});
+        TweenMax.to(".header__fab-menu", 0.25, { right: "-10.0em", opacity: "0", ease: Power2.easeOut });
+        TweenMax.to("circle", 0.5, { attr: {"r": 28, "fill": "rgb(156, 204, 101)"}, ease: Bounce.easeOut });
         $('.mdl-button--fab > *:not(svg)').show();
-        $('.header__fab-menu').hide();
+        
     }
 
     function showFooterLink() {
