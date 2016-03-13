@@ -343,7 +343,7 @@
         }
         
         $sender.addClass('click-svg');
-        TweenMax.to("circle", 0.5, { attr: {"r": 240, "fill": "rgb(85, 139, 47)"}, ease: Bounce.easeOut });
+        TweenMax.to(".mdl-layout__tab-bar > button > svg > circle", 0.5, { attr: {"r": 240, "fill": "rgb(85, 139, 47)"}, ease: Bounce.easeOut });
         TweenMax.to(".header__fab-menu", 0.5, { right: "5.5em", opacity: "1.0", ease: Power2.easeOut });
         $('.mdl-button--fab > *:not(svg)').hide(); 
      
@@ -353,7 +353,7 @@
 
         $('.mdl-button--fab').removeClass('click-svg').addClass('back');
         TweenMax.to(".header__fab-menu", 0.25, { right: "-10.0em", opacity: "0", ease: Power2.easeOut });
-        TweenMax.to("circle", 0.5, { attr: {"r": 28, "fill": "rgb(156, 204, 101)"}, ease: Bounce.easeOut });
+        TweenMax.to(".mdl-layout__tab-bar > button > svg > circle", 0.5, { attr: {"r": 28, "fill": "rgb(156, 204, 101)"}, ease: Bounce.easeOut });
         $('.mdl-button--fab > *:not(svg)').show();
         
     }

@@ -155,6 +155,10 @@ figure {
   z-index: 99;
   top: 8px;
   right: 8px;
+  background-color: rgba(225, 225, 225, 0.40);
+}
+.mdl-demo section > button:hover {
+    background-color: rgba(225, 225, 225, 1.0);
 }
 .mdl-demo section .section__circle {
   display: flex;
