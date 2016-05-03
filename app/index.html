@@ -69,6 +69,7 @@
             <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
                 <a href="#concepts" class="mdl-layout__tab is-active">Concepts</a>
                 <a href="#demos" class="mdl-layout__tab">Demos</a>
+                <a href="#maps" class="mdl-layout__tab">Maps</a>
                 <a href="#tributaries" class="mdl-layout__tab">Tributaries</a>
                 <a href="#about" class="mdl-layout__tab">About</a>
                 <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--fab-clear" id="add" >
@@ -538,7 +539,93 @@
                 </p>
             </div>
         </section>
-            </div>
+        </div>
+        <div class="mdl-layout__tab-panel" id="maps">
+            <section class="section--center mdl-grid mdl-grid--no-spacing">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h4>Maps</h4>
+                    <p>
+                        Maps require a little more time to learn and understand than the D3 core API.
+                    </p>
+                    <p data-height="653" data-theme-id="light" data-slug-hash="xVJOGd" data-default-tab="result" data-user="dotComb" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/dotComb/pen/xVJOGd/">Another D3 Satellite Projection</a> by Daniel Kemper (<a href="http://codepen.io/dotComb">@dotComb</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+            </section>
+            <section class="section--center mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <h4>Definitions</h4>
+                </div>
+                <div class="section__text mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                    <div class="mdl-card definition-card">
+                        <div>
+                            <h5 class="mdl-layout__header-row">Projection</h5>
+                            <figure>
+                                <blockquote cite="http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html">
+                                    Map projections are attempts to portray the surface of the earth or a portion of the earth on a flat surface. Some distortions of conformality, distance, direction, scale, and area always result from this process. Some projections minimize distortions in some of these properties at the expense of maximizing errors in others. Some projection are attempts to only moderately distort all of these properties.
+                                    <ul>
+                                        <li><em>Conformality</em>: When the scale of a map at any point on the map is the same in any direction, the projection is conformal. Meridians (lines of longitude) and parallels (lines of latitude) intersect at right angles. Shape is preserved locally on conformal maps.</li>
+                                        <li><em>Distance</em>: A map is equidistant when it portrays distances from the center of the projection to any other place on the map.</li>
+                                        <li><em>Direction</em>: A map preserves direction when azimuths (angles from a point on a line to another point) are portrayed correctly in all directions.</li>
+                                        <li><em>Scale</em> Scale is the relationship between a distance portrayed on a map and the same distance on the Earth. Area When a map portrays areas over the entire map so that all mapped areas have the same proportional relationship to the areas on the Earth that they represent, the map is an equal-area map.
+                                            <li>
+                                    </ul>
+                                </blockquote>
+                                <figcaption>Peter H. Dana in <cite>(http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html)</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="mdl-card__actions"><a href="http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html">map projections</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                    <div class="mdl-card definition-card">
+                        <div>
+                            <h5 class="mdl-layout__header-row">Geo Paths</h5>
+                            <figure>
+                                <blockquote cite="https://github.com/mbostock/d3/wiki/Geo-Paths">
+                                    The primary mechanism for displaying geographic data is d3.geo.path. This class is similar to d3.svg.line and the other SVG shape generators: given a geometry or feature object, it generates the path data string suitable for the "d" attribute of an SVG path element.</blockquote>
+                                <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Geo-Paths)</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Geo-Paths">Geo Path</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                    <div class="mdl-card definition-card">
+                        <div>
+                            <h5 class="mdl-layout__header-row">TopoJSON</h5>
+                            <figure>
+                                <blockquote cite="https://github.com/mbostock/topojson">
+                                    TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. TopoJSON eliminates redundancy, offering much more compact representations of geometry than with GeoJSON; typical TopoJSON files are 80% smaller than their GeoJSON equivalents.
+                                </blockquote>
+                                <figcaption>Mike Bostock in <cite>https://github.com/mbostock/topojson</cite>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="mdl-card__actions"><a href="https://github.com/mbostock/topojson">TopoJSON</a>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+<!--
+            <section class="section--center mdl-grid">
+                <div class="mdl-cell mdl-cell--12-col">
+                    <p>
+                        <pre class="language-js">
+                                        <code>
+                                       </code>
+                                    </pre>
+                    </p>
+                </div>
+            </section>
+-->
+
+        </div>
             <div class="mdl-layout__tab-panel" id="tributaries">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
                     <div class="mdl-cell mdl-cell--12-col">
@@ -620,7 +707,6 @@
     <!--    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>-->
 
     <!-- build:js(app/) ../../scripts/main.min.js -->
-    <!-- <script src="scripts/main.js"></script> -->
     <script src="./styles/src/mdlComponentHandler.js"></script>
     <script src="./styles/src/button/button.js"></script>
     <script src="./styles/src/checkbox/checkbox.js"></script>

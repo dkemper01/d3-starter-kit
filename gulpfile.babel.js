@@ -108,7 +108,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () =>
      gulp.src([
       // Component handler
-      './app/styles/src/mdlComponentHandler.js',
+      './app/styles/src/mdlComponentHandler.merged.js',
       // Base components
       './app/styles/src/button/button.js',
       './app/styles/src/checkbox/checkbox.js',
@@ -123,7 +123,7 @@ gulp.task('scripts', () =>
       './app/styles/src/textfield/textfield.js',
       './app/styles/src/tooltip/tooltip.js',
       // Complex components (which reuse base components)
-      './app/styles/src/layout/layout.js',
+      './app/styles/src/layout/layout.merged.js',
       './app/styles/src/data-table/data-table.js',
       // And finally, the ripples
       './app/styles/src/ripple/ripple.js',
