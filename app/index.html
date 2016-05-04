@@ -31,7 +31,7 @@
 
     <!-- Color the status bar on mobile devices -->
     <meta name="theme-color" content="#2F3BA2">
-    
+
     <!-- Prism -->
     <link href="styles/prism.css" rel="stylesheet">
 
@@ -72,7 +72,7 @@
                 <a href="#maps" class="mdl-layout__tab">Maps</a>
                 <a href="#tributaries" class="mdl-layout__tab">Tributaries</a>
                 <a href="#about" class="mdl-layout__tab">About</a>
-                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--fab-clear" id="add" >
+                <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--fab-clear" id="add">
                     <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%">
                         <circle cx="50%" cy="50%" r="28" fill="rgb(156, 204, 101)"></circle>
                     </svg>
@@ -80,21 +80,21 @@
                     <span class="visuallyhidden">Hot</span>
                 </button>
                 <div class="header__fab-menu">
-                        <ul>
-                            <li id="fab-close">
-                                <i class="material-icons mdl-36" role="presentation">clear</i>
-                                <a href="#">Close</a>
-                            </li>
-                            <li id="fab-group-work">
-                                <i class="material-icons mdl-36" role="presentation">group_work</i>
-                                <a href="https://github.com/dkemper01/d3-starter-kit" target="_blank">GitHub Repo</a>
-                            </li>
-                            <li id="fab-group-work">
-                                <i class="material-icons mdl-36" role="presentation">code</i>
-                                <a href="http://tributary.io" target="_blank">Tributary</a>
-                            </li>
-                        </ul>
-                    </div>
+                    <ul>
+                        <li id="fab-close">
+                            <i class="material-icons mdl-36" role="presentation">clear</i>
+                            <a href="#">Close</a>
+                        </li>
+                        <li id="fab-group-work">
+                            <i class="material-icons mdl-36" role="presentation">group_work</i>
+                            <a href="https://github.com/dkemper01/d3-starter-kit" target="_blank">GitHub Repo</a>
+                        </li>
+                        <li id="fab-group-work">
+                            <i class="material-icons mdl-36" role="presentation">code</i>
+                            <a href="http://tributary.io" target="_blank">Tributary</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </header>
         <main class="mdl-layout__content">
@@ -105,16 +105,20 @@
                     </header>
                     <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
                         <div class="mdl-card__supporting-text">
-                            <h4>Featured Example</h4> <h6>Triangulation of Random Points.</h6>Featured examples are simple but effective learning tools. Never too much JS, HTML, or CSS. Perfect for those learning D3.
+                            <h4>Featured Example</h4>
+                            <h6>Triangulation of Random Points.</h6>Featured examples are simple but effective learning tools. Never too much JS, HTML, or CSS. Perfect for those learning D3.
                         </div>
                     </div>
                     <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1">
                         <i class="material-icons">more_vert</i>
                     </button>
                     <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1">
-                        <li class="mdl-menu__item"><a class="featured-example--open-here" data-target-state="closed">Open Pen Here</a></li>
-                        <li class="mdl-menu__item"><a href="http://codepen.io/adamesque/pen/qHJsf" target="_blank">Open Pen in New Tab</a></li>
-                        <li class="mdl-menu__item"><a href="http://codepen.io/adamesque/pen/qHJsf">Go to Codepen Demo</a></li>
+                        <li class="mdl-menu__item"><a class="featured-example--open-here" data-target-state="closed">Open Pen Here</a>
+                        </li>
+                        <li class="mdl-menu__item"><a href="http://codepen.io/adamesque/pen/qHJsf" target="_blank">Open Pen in New Tab</a>
+                        </li>
+                        <li class="mdl-menu__item"><a href="http://codepen.io/adamesque/pen/qHJsf">Go to Codepen Demo</a>
+                        </li>
                     </ul>
                 </section>
                 <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
@@ -145,7 +149,7 @@
                             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                 <h5>Selections</h5>
                                 <figure>
-                                <blockquote cite="https://github.com/mbostock/d3/wiki/Selections#append">A <b>selection</b> is an array of elements pulled from the current document. D3 uses CSS3 to select elements. For example, you can select by tag ("div"), class (".awesome"), unique identifier ("#foo"), attribute ("[color=red]"), or containment ("parent child").</blockquote>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Selections#append">A <b>selection</b> is an array of elements pulled from the current document. D3 uses CSS3 to select elements. For example, you can select by tag ("div"), class (".awesome"), unique identifier ("#foo"), attribute ("[color=red]"), or containment ("parent child").</blockquote>
                                     <figcaption>Mike Bostock in <cite>Selections (https://github.com/mbostock/d3/wiki/Selections)</cite>
                                     </figcaption>
                                 </figure>
@@ -157,7 +161,7 @@
                             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                 <h5>Scales in D3</h5>
                                 <figure>
-                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch07.html#_domains_and_ranges">One more thing: to prevent your brain from mixing up the input domain and output range terminology, I’d like to propose a little exercise. When I say “input,” you say “domain.” Then I say “output,” and you say “range.” Ready? </blockquote>
+                                    <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch07.html#_domains_and_ranges">One more thing: to prevent your brain from mixing up the input domain and output range terminology, I’d like to propose a little exercise. When I say “input,” you say “domain.” Then I say “output,” and you say “range.” Ready? </blockquote>
                                     <figcaption>Scott Murray in <cite>Interactive Data Visualization (http://chimera.labs.oreilly.com/books/1230000000345/ch07.html)</cite>
                                     </figcaption>
                                 </figure>
@@ -169,7 +173,7 @@
                             <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
                                 <h5>Drawing in SVG</h5>
                                 <figure>
-                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_the_svg_element">There are a number of visual elements that you can include between those svg tags, including rect, circle, ellipse, line, text, and path. (Sorry, zebras is not valid in this context.)</blockquote>
+                                    <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_the_svg_element">There are a number of visual elements that you can include between those svg tags, including rect, circle, ellipse, line, text, and path. (Sorry, zebras is not valid in this context.)</blockquote>
                                     <figcaption>Scott Murray in <cite>Interactive Data Visualization (http://chimera.labs.oreilly.com/books/1230000000345/ch03.html)</cite>
                                     </figcaption>
                                 </figure>
@@ -179,12 +183,12 @@
                         <div class="mdl-card__actions">
                             <a href="http://www.oreilly.com/pub/au/5355" class="mdl-button">Scott Murray</a><a href="https://en.wikipedia.org/wiki/Mike_Bostock" class="mdl-button">Mike Bostock</a>
                         </div>
-                    </div> 
+                    </div>
                 </section>
                 <section class="section--footer mdl-color--white mdl-grid">
                     <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                         <div class="section__circle-container__circle mdl-color--accent section__circle--big">
-                            <img src="images/mike-bostock.jpeg" class="section__circle-container__circle__image"/>
+                            <img src="images/mike-bostock.jpeg" class="section__circle-container__circle__image" />
                         </div>
                     </div>
                     <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
@@ -192,7 +196,7 @@
                     </div>
                     <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
                         <div class="section__circle-container__circle mdl-color--accent section__circle--big">
-                            <img src="images/scott-murray1.jpg" class="section__circle-container__circle__image-scott"/>
+                            <img src="images/scott-murray1.jpg" class="section__circle-container__circle__image-scott" />
                         </div>
                     </div>
                     <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
@@ -205,7 +209,7 @@
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>Force Directed Graph</h4>
                         <p>
-                            An interactive graph with forces like "gravity", "charge", and "friction". It could be cyclic, or acyclic, directional or non-directional, connected, or disconnected. It usually all depends on the data!  If a node is connected to another via one or more edges, a relationship exists among these data. 
+                            An interactive graph with forces like "gravity", "charge", and "friction". It could be cyclic, or acyclic, directional or non-directional, connected, or disconnected. It usually all depends on the data! If a node is connected to another via one or more edges, a relationship exists among these data.
                         </p>
                         <p>
                             Here, we have the social media usage of fifteen departments, initiatives, and other governmental organizations of New York City. The relationship that connects one or more of them is the fact that they share a use of one or more of the same social media service.
@@ -224,9 +228,10 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">Force Layout</h5>
                                 <figure>
-                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout">
-                                    Force-directed layouts are so-called because they use simulations of physical forces to arrange elements on the screen.  The elements are nodes and edges; SVG shapes and lines, respectively.</blockquote>
-                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 11</cite></figcaption>
+                                    <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout">
+                                        Force-directed layouts are so-called because they use simulations of physical forces to arrange elements on the screen. The elements are nodes and edges; SVG shapes and lines, respectively.</blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 11</cite>
+                                    </figcaption>
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#force">d3.layout.force()</a>
@@ -238,8 +243,8 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">An Ordinal Scale: Categorical Colors</h5>
                                 <figure>
-                                <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#_ordinal">
-                                    Ordinal scales have a discrete domain, such as a set of names or categories. There are also quantitative scales, which have a continuous domain, such as the set of real numbers. Scales are an optional feature in D3; you don't have to use them, if you prefer to do the math yourself. However, using scales can greatly simplify the code needed to map a dimension of data to a visual representation.</blockquote>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#_ordinal">
+                                        Ordinal scales have a discrete domain, such as a set of names or categories. There are also quantitative scales, which have a continuous domain, such as the set of real numbers. Scales are an optional feature in D3; you don't have to use them, if you prefer to do the math yourself. However, using scales can greatly simplify the code needed to map a dimension of data to a visual representation.</blockquote>
                                     <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Ordinal-Scales)</cite>
                                     </figcaption>
                                 </figure>
@@ -253,19 +258,20 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">Nodes</h5>
                                 <figure>
-                                <blockquote cite="https://github.com/mbostock/d3/wiki/Force-Layout#nodes">
-                                    Each node has the following attributes:
-                                    <ul>
-                                        <li>index - the zero-based index of the node within the <em>nodes</em> array.</li>
-                                        <li>x - the <em>x</em>-coordinate of the current node position.</li>
-                                        <li>y - the <em>y</em>-coordinate of the current node position.</li>
-                                        <li>px - the <em>x</em>-coordinate of the previous node position.</li>
-                                        <li>py - the <em>y</em>-coordinate of the previous node position.</li>
-                                        <li>fixed - a boolean indicating whether node position is locked.</li>
-                                        <li>weight - the node weight; the number of associated links.</li>
-                                    </ul>
-                                </blockquote>
-                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Force-Layout#nodes</cite></figcaption>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Force-Layout#nodes">
+                                        Each node has the following attributes:
+                                        <ul>
+                                            <li>index - the zero-based index of the node within the <em>nodes</em> array.</li>
+                                            <li>x - the <em>x</em>-coordinate of the current node position.</li>
+                                            <li>y - the <em>y</em>-coordinate of the current node position.</li>
+                                            <li>px - the <em>x</em>-coordinate of the previous node position.</li>
+                                            <li>py - the <em>y</em>-coordinate of the previous node position.</li>
+                                            <li>fixed - a boolean indicating whether node position is locked.</li>
+                                            <li>weight - the node weight; the number of associated links.</li>
+                                        </ul>
+                                    </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Force-Layout#nodes</cite>
+                                    </figcaption>
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#nodes">force.nodes([nodes])</a>
@@ -277,14 +283,15 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">Links</h5>
                                 <figure>
-                                <blockquote cite="https://github.com/mbostock/d3/wiki/Force-Layout#links">
-                                    Each link has the following attributes:
-                                    <ul>
-                                        <li>source - the source node (an element in <em>nodes</em>).</li>
-                                        <li>target - the target node (an element in <em>nodes</em>).</li>
-                                    </ul>
-                                </blockquote>
-                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Force-Layout#links</cite></figcaption>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Force-Layout#links">
+                                        Each link has the following attributes:
+                                        <ul>
+                                            <li>source - the source node (an element in <em>nodes</em>).</li>
+                                            <li>target - the target node (an element in <em>nodes</em>).</li>
+                                        </ul>
+                                    </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Force-Layout#links</cite>
+                                    </figcaption>
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#links">force.links([links])</a>
@@ -296,9 +303,10 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">Range Bands</h5>
                                 <figure>
-                                <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands">
-                                    Sets the output range from the specified continuous interval. The array interval contains two elements representing the minimum and maximum numeric value. This interval is subdivided into n evenly-spaced bands, where n is the number of (unique) values in the input domain. </blockquote>
-                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands</cite></figcaption>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands">
+                                        Sets the output range from the specified continuous interval. The array interval contains two elements representing the minimum and maximum numeric value. This interval is subdivided into n evenly-spaced bands, where n is the number of (unique) values in the input domain. </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands</cite>
+                                    </figcaption>
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#ordinal_rangeBands">ordinal.rangeBands(interval[, padding[, outerPadding]])</a>
@@ -310,9 +318,10 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">Tick</h5>
                                 <figure>
-                                <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout">
-                                    The "tick" events are dispatched for each tick of the simulation. Listen to tick events to update the displayed positions of nodes and links. For example ...</blockquote>
-                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 11</cite></figcaption>
+                                    <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch11.html#_force_layout">
+                                        The "tick" events are dispatched for each tick of the simulation. Listen to tick events to update the displayed positions of nodes and links. For example ...</blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 11</cite>
+                                    </figcaption>
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Force-Layout#tick">force.tick()</a>
@@ -320,8 +329,8 @@
                         </div>
                     </div>
                 </section>
-                                    
-	   <section class="section--center mdl-grid">
+
+                <section class="section--center mdl-grid">
                     <div class="mdl-cell mdl-cell--12-col">
                         <p>
                             <pre class="language-js">
@@ -447,57 +456,57 @@
                         </p>
                     </div>
                 </section>
-       <section class="section--center mdl-grid mdl-grid--no-spacing">
-            <div class="mdl-cell mdl-cell--12-col">
-                <h4>Categorical Color Fun</h4>
-                <p>
-                    So little the code, so colorful the result! First, read <em><a href="http://bost.ocks.org/mike/join/">Thinking with Joins</a></em> to understand the select().data().enter().append() method chain.  It is a quick and insightful read.  You may also want to check out <em>ordinal scales</em> that produce a range of <em><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c">categorical colors</a>.</em>
-                </p>
-                <p>By knowing only a little about SVG, you can read the code below and understand exactly how the colored circles are being produced.  That's it!  This little bit of code is all that is needed.
-                </p>                    
-                <div class="color-c-chips-legend"></div>
-                <div class="color-c-ex1"></div>
-            </div>
-        </section>
-        <section class="section--center mdl-grid">
-            <div class="mdl-cell mdl-cell--12-col">
-                <h4>Definitions</h4>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-                <div class="mdl-card definition-card">
-                    <div>
-                        <h5 class="mdl-layout__header-row">SVG: Drawing Circles</h5>
-                        <figure>
-                        <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_simple_shapes">
-                            The circle element draws a circle. Use cx and cy to specify the coordinates of the center, and r to specify the radius</blockquote>
-                            <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 3</cite>
-                            </figcaption>
-                        </figure>
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Categorical Color Fun</h4>
+                        <p>
+                            So little the code, so colorful the result! First, read <em><a href="http://bost.ocks.org/mike/join/">Thinking with Joins</a></em> to understand the select().data().enter().append() method chain. It is a quick and insightful read. You may also want to check out <em>ordinal scales</em> that produce a range of <em><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category20c">categorical colors</a>.</em>
+                        </p>
+                        <p>By knowing only a little about SVG, you can read the code below and understand exactly how the colored circles are being produced. That's it! This little bit of code is all that is needed.
+                        </p>
+                        <div class="color-c-chips-legend"></div>
+                        <div class="color-c-ex1"></div>
                     </div>
-                    <div class="mdl-card__actions"><a href="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_simple_shapes">SVG - Simple Shapes</a>
+                </section>
+                <section class="section--center mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Definitions</h4>
                     </div>
-                </div>
-            </div>
-            <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-                <div class="mdl-card definition-card">
-                    <div>
-                        <h5 class="mdl-layout__header-row">An Ordinal Scale: Categorical Colors</h5>
-                        <figure>
-                        <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#_ordinal">
-                            Ordinal scales have a discrete domain, such as a set of names or categories. There are also quantitative scales, which have a continuous domain, such as the set of real numbers. Scales are an optional feature in D3; you don't have to use them, if you prefer to do the math yourself. However, using scales can greatly simplify the code needed to map a dimension of data to a visual representation.</blockquote>
-                            <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Ordinal-Scales)</cite>
-                            </figcaption>
-                        </figure>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">SVG: Drawing Circles</h5>
+                                <figure>
+                                    <blockquote cite="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_simple_shapes">
+                                        The circle element draws a circle. Use cx and cy to specify the coordinates of the center, and r to specify the radius</blockquote>
+                                    <figcaption>Scott Murray in <cite>Interactive Data Visualization, Chapter 3</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="http://chimera.labs.oreilly.com/books/1230000000345/ch03.html#_simple_shapes">SVG - Simple Shapes</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category10">d3.scale.category10()</a>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">An Ordinal Scale: Categorical Colors</h5>
+                                <figure>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Ordinal-Scales#_ordinal">
+                                        Ordinal scales have a discrete domain, such as a set of names or categories. There are also quantitative scales, which have a continuous domain, such as the set of real numbers. Scales are an optional feature in D3; you don't have to use them, if you prefer to do the math yourself. However, using scales can greatly simplify the code needed to map a dimension of data to a visual representation.</blockquote>
+                                    <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Ordinal-Scales)</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Ordinal-Scales#category10">d3.scale.category10()</a>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </section>
-        <section class="section--center mdl-grid">
-            <div class="mdl-cell mdl-cell--12-col">
-                <p>
-                    <pre class="language-js">
+                </section>
+                <section class="section--center mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <p>
+                            <pre class="language-js">
                         <code>
     // Width and height of containing element 
     //
@@ -536,102 +545,92 @@
     }  
                         </code>
                     </pre>
-                </p>
+                        </p>
+                    </div>
+                </section>
             </div>
-        </section>
-        </div>
-        <div class="mdl-layout__tab-panel" id="maps">
-            <section class="section--center mdl-grid mdl-grid--no-spacing">
-                <div class="mdl-cell mdl-cell--12-col">
-                    <h4>Maps</h4>
-                    <p>
-                        Maps require a little more time to learn and understand than the D3 core API.
-                    </p>
-                    <p data-height="653" data-theme-id="light" data-slug-hash="xVJOGd" data-default-tab="result" data-user="dotComb" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/dotComb/pen/xVJOGd/">Another D3 Satellite Projection</a> by Daniel Kemper (<a href="http://codepen.io/dotComb">@dotComb</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-                </div>
-            </section>
-            <section class="section--center mdl-grid">
-                <div class="mdl-cell mdl-cell--12-col">
-                    <h4>Definitions</h4>
-                </div>
-                <div class="section__text mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
-                    <div class="mdl-card definition-card">
-                        <div>
-                            <h5 class="mdl-layout__header-row">Projection</h5>
-                            <figure>
-                                <blockquote cite="http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html">
-                                    Map projections are attempts to portray the surface of the earth or a portion of the earth on a flat surface. Some distortions of conformality, distance, direction, scale, and area always result from this process. Some projections minimize distortions in some of these properties at the expense of maximizing errors in others. Some projection are attempts to only moderately distort all of these properties.
-                                    <ul>
-                                        <li><em>Conformality</em>: When the scale of a map at any point on the map is the same in any direction, the projection is conformal. Meridians (lines of longitude) and parallels (lines of latitude) intersect at right angles. Shape is preserved locally on conformal maps.</li>
-                                        <li><em>Distance</em>: A map is equidistant when it portrays distances from the center of the projection to any other place on the map.</li>
-                                        <li><em>Direction</em>: A map preserves direction when azimuths (angles from a point on a line to another point) are portrayed correctly in all directions.</li>
-                                        <li><em>Scale</em> Scale is the relationship between a distance portrayed on a map and the same distance on the Earth. Area When a map portrays areas over the entire map so that all mapped areas have the same proportional relationship to the areas on the Earth that they represent, the map is an equal-area map.
-                                            <li>
-                                    </ul>
-                                </blockquote>
-                                <figcaption>Peter H. Dana in <cite>(http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html)</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="mdl-card__actions"><a href="http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html">map projections</a>
+            <div class="mdl-layout__tab-panel" id="maps">
+                <section class="section--center mdl-grid mdl-grid--no-spacing">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Maps</h4>
+                        <p>
+                            Maps require a little more time to learn and understand than the D3 core API. The best learning resource for creating maps with D3 is Mike Bostock's <a href="https://bost.ocks.org/mike/map/" target="_blank">Let's Make a Map</a> tutorial.
+                        </p>
+                        <p>
+                            As you code a map visualization using D3, you will encounter terms you probably haven't read about yet. Words like <a href="http://support.esri.com/en/knowledgebase/GISDictionary/term/graticule" target="_blank">graticule</a>, and <a href="http://www.naturalearthdata.com/forums/topic/definition-of-scale-rank-appropriate-attribute-for-size-based-styling/" target="_blank">scalerank</a> require a little research at first, but with some reading, and good examples to follow you'll most likely be on your way to map visualization greatness.
+                        </p>
+                        <p data-height="653" data-theme-id="light" data-slug-hash="xVJOGd" data-default-tab="result" data-user="dotComb" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/dotComb/pen/xVJOGd/">Another D3 Satellite Projection</a> by Daniel Kemper (<a href="http://codepen.io/dotComb">@dotComb</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+                        <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+                    </div>
+                </section>
+                <section class="section--center mdl-grid">
+                    <div class="mdl-cell mdl-cell--12-col">
+                        <h4>Definitions</h4>
+                    </div>
+                    <div class="section__text mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Projection</h5>
+                                <figure>
+                                    <blockquote cite="http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html">
+                                        Map projections are attempts to portray the surface of the earth or a portion of the earth on a flat surface. Some distortions of conformality, distance, direction, scale, and area always result from this process. Some projections minimize distortions in some of these properties at the expense of maximizing errors in others. Some projection are attempts to only moderately distort all of these properties.
+                                        <ul>
+                                            <li><em>Conformality</em>: When the scale of a map at any point on the map is the same in any direction, the projection is conformal. Meridians (lines of longitude) and parallels (lines of latitude) intersect at right angles. Shape is preserved locally on conformal maps.</li>
+                                            <li><em>Distance</em>: A map is equidistant when it portrays distances from the center of the projection to any other place on the map.</li>
+                                            <li><em>Direction</em>: A map preserves direction when azimuths (angles from a point on a line to another point) are portrayed correctly in all directions.</li>
+                                            <li><em>Scale</em> Scale is the relationship between a distance portrayed on a map and the same distance on the Earth. Area When a map portrays areas over the entire map so that all mapped areas have the same proportional relationship to the areas on the Earth that they represent, the map is an equal-area map.
+                                                <li>
+                                        </ul>
+                                    </blockquote>
+                                    <figcaption>Peter H. Dana in <cite>(http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html)</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="http://www.colorado.edu/geography/gcraft/notes/mapproj/mapproj_f.html">map projections</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-                    <div class="mdl-card definition-card">
-                        <div>
-                            <h5 class="mdl-layout__header-row">Geo Paths</h5>
-                            <figure>
-                                <blockquote cite="https://github.com/mbostock/d3/wiki/Geo-Paths">
-                                    The primary mechanism for displaying geographic data is d3.geo.path. This class is similar to d3.svg.line and the other SVG shape generators: given a geometry or feature object, it generates the path data string suitable for the "d" attribute of an SVG path element.</blockquote>
-                                <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Geo-Paths)</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Geo-Paths">Geo Path</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
-                    <div class="mdl-card definition-card">
-                        <div>
-                            <h5 class="mdl-layout__header-row">TopoJSON</h5>
-                            <figure>
-                                <blockquote cite="https://github.com/mbostock/topojson">
-                                    TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. TopoJSON eliminates redundancy, offering much more compact representations of geometry than with GeoJSON; typical TopoJSON files are 80% smaller than their GeoJSON equivalents.
-                                </blockquote>
-                                <figcaption>Mike Bostock in <cite>https://github.com/mbostock/topojson</cite>
-                                </figcaption>
-                            </figure>
-                        </div>
-                        <div class="mdl-card__actions"><a href="https://github.com/mbostock/topojson">TopoJSON</a>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">Geo Paths</h5>
+                                <figure>
+                                    <blockquote cite="https://github.com/mbostock/d3/wiki/Geo-Paths">
+                                        The primary mechanism for displaying geographic data is d3.geo.path. This class is similar to d3.svg.line and the other SVG shape generators: given a geometry or feature object, it generates the path data string suitable for the "d" attribute of an SVG path element.</blockquote>
+                                    <figcaption>Mike Bostock in <cite>(https://github.com/mbostock/d3/wiki/Geo-Paths)</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/d3/wiki/Geo-Paths">Geo Path</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div class="section__text mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-cell--4-col-phone mdl-shadow--2dp">
+                        <div class="mdl-card definition-card">
+                            <div>
+                                <h5 class="mdl-layout__header-row">TopoJSON</h5>
+                                <figure>
+                                    <blockquote cite="https://github.com/mbostock/topojson">
+                                        TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. TopoJSON eliminates redundancy, offering much more compact representations of geometry than with GeoJSON; typical TopoJSON files are 80% smaller than their GeoJSON equivalents.
+                                    </blockquote>
+                                    <figcaption>Mike Bostock in <cite>https://github.com/mbostock/topojson</cite>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <div class="mdl-card__actions"><a href="https://github.com/mbostock/topojson">TopoJSON</a>
+                            </div>
+                        </div>
+                    </div>
 
-            </section>
+                </section>
 
-<!--
-            <section class="section--center mdl-grid">
-                <div class="mdl-cell mdl-cell--12-col">
-                    <p>
-                        <pre class="language-js">
-                                        <code>
-                                       </code>
-                                    </pre>
-                    </p>
-                </div>
-            </section>
--->
-
-        </div>
+            </div>
             <div class="mdl-layout__tab-panel" id="tributaries">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>Learning with Tributaries and Inlets</h4>
                         <p>
-                            Tributary <a href="http://tributary.io">tributary.io</a> is a rapid prototyping and overall interactive learning tool.  In addition to providing a REPL for JavaScript, one of the single greatest features of Tributary is the slider.  That is; find a method parameter, an array of values, or a number that is a factor in a calculation, then click.  You will notice a slider control pop up.  Use it to adjust the parameter, number, or array value of your choice and see the result in real-time. 
+                            Tributary <a href="http://tributary.io">tributary.io</a> is a rapid prototyping and overall interactive learning tool. In addition to providing a REPL for JavaScript, one of the single greatest features of Tributary is the slider. That is; find a method parameter, an array of values, or a number that is a factor in a calculation, then click. You will notice a slider control pop up. Use it to adjust the parameter, number, or array value of your choice and see the result in real-time.
                         </p>
                     </div>
                 </section>
@@ -644,7 +643,7 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">#401 Inside the nautilus</h5>
                                 <figure>
-                                    <img class="section__tributaries-img" src="images/nautilus.png" alt="nautilus"/>
+                                    <img class="section__tributaries-img" src="images/nautilus.png" alt="nautilus" />
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="http://tributary.io/inlet/5743595">nautilus inlet</a>
@@ -656,7 +655,7 @@
                             <div>
                                 <h5 class="mdl-layout__header-row">droplet</h5>
                                 <figure>
-                                    <img class="section__tributaries-img" src="images/droplet.png" alt="droplet"/>
+                                    <img class="section__tributaries-img" src="images/droplet.png" alt="droplet" />
                                 </figure>
                             </div>
                             <div class="mdl-card__actions"><a href="http://tributary.io/inlet/a7dab6ef7b2ad9025344">droplet inlet</a>
@@ -664,16 +663,16 @@
                         </div>
                     </div>
                 </section>
-            </div>   
+            </div>
             <div class="mdl-layout__tab-panel" id="about">
                 <section class="section--center mdl-grid mdl-grid--no-spacing">
                     <div class="mdl-cell mdl-cell--12-col">
                         <h4>About</h4>
                         <p>
-                            By <a href="http://dankemper.net/t3">me</a> for you! 
+                            By <a href="http://dankemper.net/t3">me</a> for you!
                         </p>
                         <p class="para--pull-down"></p>
-                  </div>
+                    </div>
                 </section>
             </div>
             <footer class="mdl-mega-footer">
@@ -696,8 +695,10 @@
                         D3 Starter Kit
                     </div>
                     <ul class="mdl-mega-footer--link-list">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Privacy and Terms</a></li>
+                        <li><a href="#">About</a>
+                        </li>
+                        <li><a href="#">Privacy and Terms</a>
+                        </li>
                     </ul>
                 </div>
             </footer>
@@ -706,6 +707,11 @@
 
     <!--    <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>-->
 
+    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js"></script>
     <!-- build:js(app/) ../../scripts/main.min.js -->
     <script src="./styles/src/mdlComponentHandler.js"></script>
     <script src="./styles/src/button/button.js"></script>
@@ -723,11 +729,6 @@
     <script src="./styles/src/layout/layout.js"></script>
     <script src="./styles/src/data-table/data-table.js"></script>
     <script src="./styles/src/ripple/ripple.js"></script>
-    <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.2/easing/EasePack.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/SVG-Morpheus/0.1.8/svg-morpheus.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/d3/3.5.12/d3.js"></script>
     <script src="scripts/prism.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->

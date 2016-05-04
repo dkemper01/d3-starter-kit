@@ -40,7 +40,7 @@ const reload = browserSync.reload;
 
 // Lint JavaScript
 gulp.task('lint', () =>
-  gulp.src(['app/scripts/**/*.js', '!app/scripts/prism.js'])
+  gulp.src(['app/scripts/**/*.js', '!app/scripts/prism.js', '!app/scripts/main-fdg-two-legends.js'])
     .pipe($.eslint())
     .pipe($.eslint.format())
     .pipe($.if(!browserSync.active, $.eslint.failOnError()))
@@ -108,7 +108,7 @@ gulp.task('styles', () => {
 gulp.task('scripts', () =>
      gulp.src([
       // Component handler
-      './app/styles/src/mdlComponentHandler.merged.js',
+      './app/styles/src/mdlComponentHandler.js',
       // Base components
       './app/styles/src/button/button.js',
       './app/styles/src/checkbox/checkbox.js',
@@ -123,7 +123,7 @@ gulp.task('scripts', () =>
       './app/styles/src/textfield/textfield.js',
       './app/styles/src/tooltip/tooltip.js',
       // Complex components (which reuse base components)
-      './app/styles/src/layout/layout.merged.js',
+      './app/styles/src/layout/layout.js',
       './app/styles/src/data-table/data-table.js',
       // And finally, the ripples
       './app/styles/src/ripple/ripple.js',
@@ -145,35 +145,10 @@ gulp.task('scripts', () =>
 
 // Scan your HTML for assets & optimize them
 gulp.task('html', () => {
-  return gulp.src('app/**/*.html')
-    .pipe($.useref({searchPath: '{.tmp,app}'}))
-    // Remove any unused CSS
-    .pipe($.if('*.css', $.uncss({
-      html: [
-        'app/index.html'
-      ],
-      // CSS Selectors for UnCSS to ignore
-      ignore: []
-    })))
-
-    // Concatenate and minify styles
-    // In case you are still using useref build blocks
-    .pipe($.if('*.css', $.cssnano()))
-
-    // Minify any HTML
-    .pipe($.if('*.html', $.htmlmin({
-      removeComments: true,
-      collapseWhitespace: true,
-      collapseBooleanAttributes: true,
-      removeAttributeQuotes: true,
-      removeRedundantAttributes: true,
-      removeEmptyAttributes: true,
-      removeScriptTypeAttributes: true,
-      removeStyleLinkTypeAttributes: true,
-      removeOptionalTags: true
-    })))
+  return gulp.src('app/index.html')
+    .pipe($.useref({searchPath: '{app}'}))
     // Output files
-    .pipe($.if('*.html', $.size({title: 'html', showFiles: true})))
+    .pipe($.size({title: 'html', showFiles: true}))
     .pipe(gulp.dest('dist'));
 });
 
