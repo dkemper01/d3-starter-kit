@@ -203,6 +203,9 @@ figure {
 .mdl-demo section .section__text a {
   text-decoration: none;
 }
+.mdl-demo section .section__circle-container {
+    margin: 0 1em 0 0;
+}
 .mdl-demo section .section__circle-container > .section__circle-container__circle {
   width: 64px;
   height: 64px;
@@ -261,6 +264,9 @@ figure {
 }
 .mdl-demo .mdl-menu__container {
   z-index: 99;
+}
+.mdl-demo .mdl-grid--no-spacing > .section-text--pull-down {
+    margin-top: 1.5em;
 }
 .mdl-menu a {
     text-decoration: inherit;
