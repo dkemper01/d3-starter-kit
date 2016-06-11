@@ -572,11 +572,12 @@
     }
 
     & .material-icons {
-      line-height: $layout-tab-bar-height;
+      line-height: $layout-tab-bar-height + 12px;
     }
 
     &.is-active {
       color: $layout-header-text-color;
+      display: inline-block;
     }
   }
 
