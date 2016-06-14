@@ -26,12 +26,13 @@
    * @constructor
    * @param {HTMLElement} element The element that will be upgraded.
    * @param {!Array<Function>} layoutCallbacks Array of callbacks to invoke when a tab is clicked.
+	 * @param {!Array<Object>} interceptors Array of objects for custom event registration.
    */
-  var MaterialLayout = function MaterialLayout(element, layoutCallbacks) {
+  var MaterialLayout = function MaterialLayout(element, layoutCallbacks, interceptors) {
     this.element_ = element;
 
     // Initialize instance.
-    this.init(layoutCallbacks);
+    this.init(layoutCallbacks, interceptors);
   };
   window['MaterialLayout'] = MaterialLayout;
 
@@ -282,7 +283,7 @@
   /**
    * Initialize element.
    */
-  MaterialLayout.prototype.init = function(layoutCallbacks) {
+  MaterialLayout.prototype.init = function(layoutCallbacks, interceptors) {
     if (this.element_) {
       var container = document.createElement('div');
       container.classList.add(this.CssClasses_.CONTAINER);
@@ -430,6 +431,27 @@
           /** @type {string} */ (this.Constant_.MAX_WIDTH));
       this.screenSizeMediaQuery_.addListener(this.screenSizeHandler_.bind(this));
       this.screenSizeHandler_();
+			
+			var shouldRegisterInterceptor = function(componentName, eventName) {		
+				var registerInterceptor = { "doRegister": false, "interceptorFn": null };
+
+				if (interceptors && Array.isArray(interceptors)) {
+
+					for (var c = 0; c < interceptors.length; c++) {
+						var currInterceptor = interceptors[c];
+
+						if ((currInterceptor.componentName === componentName) && (currInterceptor.eventName === eventName)) {	
+							registerInterceptor.doRegister = true;
+							registerInterceptor.interceptorFn = currInterceptor.handler;
+
+							break;
+						} 
+					}
+				}
+
+				return registerInterceptor;
+
+			};
 
       // Initialize tabs, if any.
       if (this.header_ && this.tabBar_) {
@@ -447,10 +469,13 @@
         leftButtonIcon.classList.add(this.CssClasses_.ICON);
         leftButtonIcon.textContent = this.Constant_.CHEVRON_LEFT;
         leftButton.appendChild(leftButtonIcon);
-        leftButton.addEventListener('click', function() {
-          this.tabBar_.scrollLeft -= this.Constant_.TAB_SCROLL_PIXELS;
-        }.bind(this));
-
+				
+				var shouldIntercept = shouldRegisterInterceptor('leftButton', 'click');
+				
+				leftButton.addEventListener('click', (shouldIntercept.doRegister ? shouldIntercept.interceptorFn : function() {		
+						this.tabBar_.scrollLeft -= this.Constant_.TAB_SCROLL_PIXELS;	
+					}).bind(this));
+				
         var rightButton = document.createElement('div');
         rightButton.classList.add(this.CssClasses_.TAB_BAR_BUTTON);
         rightButton.classList.add(this.CssClasses_.TAB_BAR_RIGHT_BUTTON);
@@ -458,9 +483,12 @@
         rightButtonIcon.classList.add(this.CssClasses_.ICON);
         rightButtonIcon.textContent = this.Constant_.CHEVRON_RIGHT;
         rightButton.appendChild(rightButtonIcon);
-        rightButton.addEventListener('click', function() {
+				
+				shouldIntercept = shouldRegisterInterceptor('rightButton', 'click');
+				
+				rightButton.addEventListener('click', (shouldIntercept.doRegister ? shouldIntercept.interceptorFn : function() {	
           this.tabBar_.scrollLeft += this.Constant_.TAB_SCROLL_PIXELS;
-        }.bind(this));
+        }).bind(this));
 
         tabContainer.appendChild(leftButton);
         tabContainer.appendChild(this.tabBar_);
@@ -475,8 +503,7 @@
             leftButton.classList.remove(this.CssClasses_.IS_ACTIVE);
           }
 
-          if (this.tabBar_.scrollLeft <
-              this.tabBar_.scrollWidth - this.tabBar_.offsetWidth) {
+          if (this.tabBar_.scrollLeft < this.tabBar_.scrollWidth - this.tabBar_.offsetWidth) {
             rightButton.classList.add(this.CssClasses_.IS_ACTIVE);
           } else {
             rightButton.classList.remove(this.CssClasses_.IS_ACTIVE);

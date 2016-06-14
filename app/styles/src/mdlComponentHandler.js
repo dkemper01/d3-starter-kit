@@ -57,6 +57,11 @@ var componentHandler = {
    * automatically called on window load.
    */
   upgradeAllRegistered: function() {},
+	
+	/**
+	 * Allows for custom event handlers.
+	 */
+	registerInterceptors: function(jsClass, interceptors) {},
   
   /**
   * Allows for a user-defined callback to be executed once a tab is selected.
@@ -225,7 +230,7 @@ componentHandler = (function() {
         // Mark element as upgraded.
         upgradedList.push(registeredClass.className);
         element.setAttribute('data-upgraded', upgradedList.join(','));
-        var instance = new registeredClass.classConstructor(element, registeredClass.selectedTabCallbacks);
+        var instance = new registeredClass.classConstructor(element, registeredClass.selectedTabCallbacks, registeredClass.interceptors);
         instance[componentConfigProperty_] = registeredClass;
         createdComponents_.push(instance);
           
@@ -310,7 +315,8 @@ componentHandler = (function() {
       cssClass: config.cssClass || config['cssClass'],
       widget: widget,
       callbacks: [],
-      selectedTabCallbacks: []
+      selectedTabCallbacks: [],
+			interceptors: []
       
     });
 
@@ -336,11 +342,21 @@ componentHandler = (function() {
       registeredComponents_.push(newConfig);
     }
   }
+	
+	/**
+	 * Allows for custom event registration.
+	 */
+	function registerInterceptorsInternal(jsClass, interceptors) {
+		var regClass = findRegisteredClass_(jsClass);
+    if (regClass) {
+      regClass.interceptors = interceptors;
+    }
+	}
   
   /**
    * Allows for a user-defined callback to be executed once a tab is selected.
    */
-  function registerTabSelectedCallbackInternal (jsClass, callback) {
+  function registerTabSelectedCallbackInternal(jsClass, callback) {
     var regClass = findRegisteredClass_(jsClass);
     if (regClass) {
       regClass.selectedTabCallbacks.push(callback);
@@ -454,6 +470,7 @@ componentHandler = (function() {
     upgradeElement: upgradeElementInternal,
     upgradeElements: upgradeElementsInternal,
     upgradeAllRegistered: upgradeAllRegisteredInternal,
+		registerInterceptors: registerInterceptorsInternal,
     registerTabSelectedCallback: registerTabSelectedCallbackInternal,
     registerUpgradedCallback: registerUpgradedCallbackInternal,
     register: registerInternal,
